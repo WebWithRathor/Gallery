@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* Adjust the number of columns */
+  gap: 4px; /* Adjust gap between grid items */
+  max-width: 600px; /* Adjust max width as needed */
+  margin: auto; /* Center align */
+}
+.grid-item {
+  background-color: #ccc; /* Default background color */
+  height: 50px; /* Adjust height as needed */
+}
+.grid-item.active {
+  background-color: #3490dc; /* Active (randomized) state background color */
+}
