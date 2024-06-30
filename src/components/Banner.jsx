@@ -7,7 +7,7 @@ const Banner = () => {
         <div className="overlay z-[-1] h-full w-full bg-black opacity-30 absolute top-0 left-0"></div>
         <h1 className=' text-7xl font-[monument] tracking-wide uppercase'>PhotoGraphy</h1>
         <div className="search flex w-fit bg-white rounded-lg mt-6 p-1">
-        <button className='px-3 py-2 bg-gray-900 rounded-lg text-white'><i className="ri-search-line mr-1.5"></i>Search</button>
+        <button className='px-3 py-2 bg-black rounded-lg text-white'><i className="ri-search-line mr-1.5"></i>Search</button>
         <input placeholder='Search Images' className='text-lg text-black w-[20vw] px-3 py-1 outline-none ' type="text" name="" id="" />
         </div>
     </div>
