@@ -24,7 +24,7 @@ const HomeLayout = () => {
             <Banner />
             <div className='min-h-screen w-full pt-20 py-32 px-10'>
                 <GridHeading />
-                <GridSection Images={Images} />
+                <GridSection Images={Images}  />
                 <Pagination pageNo={pageNo} setpageNo={setpageNo} />
             </div>
         </div>
