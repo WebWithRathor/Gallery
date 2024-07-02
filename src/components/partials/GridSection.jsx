@@ -9,7 +9,7 @@ const GridSection = ({ Images }) => {
                 <Loading /> :
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                     {Images.photos.map((image) => {
-                        return <SingleImage key={image.id} backgroundColor={image.avg_color} src={image.src.large} />
+                        return <SingleImage key={image.id} photographer={image.photographer} backgroundColor={image.avg_color} src={image.src.large} />
                     })}
                 </div>
     )
