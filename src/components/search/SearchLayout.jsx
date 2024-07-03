@@ -30,7 +30,7 @@ const SearchLayout = () => {
             <SearchHead query={query} setpageNo={setpageNo} />
             <SearchFilter orientation={orientation} color={color} setorientation={setorientation} setcolor={setcolor} setsize={setsize} size={size} />
             <GridSection Images={Images} path={pathname} />
-            <Pagination pageNo={pageNo} setpageNo={setpageNo} />
+            <Pagination pageNo={pageNo} setpageNo={setpageNo} totalPages={Images.length === 0 ? '' : Images.total_results} />
             <Outlet/>
         </div>
     )

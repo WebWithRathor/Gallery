@@ -15,7 +15,6 @@ const HomeLayout = () => {
         const { data } = await Axios.get(`/curated?page=${pageNo}`);
         setImages(data);
     }
-    
     useEffect(() => {
         getImages();
         localStorage.setItem('pageNo', pageNo);
@@ -28,7 +27,7 @@ const HomeLayout = () => {
             <div className='min-h-screen w-full pt-20 py-32 px-10'>
                 <GridHeading />
                 <GridSection Images={Images} path={pathname}  />
-                <Pagination pageNo={pageNo} setpageNo={setpageNo} />
+                <Pagination pageNo={pageNo} setpageNo={setpageNo} totalPages={Images.length === 0 ? '' : Images.total_results} />
             </div>
             <Outlet />
         </div>
