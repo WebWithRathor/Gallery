@@ -5,7 +5,11 @@ const Banner = () => {
   const [query, setquery] = useState('');
   const navigate = useNavigate();
   const navigateHandle = () => {
-    if(query)navigate(`/search/${query}`);
+    if(query){
+      localStorage.setItem('pageNo',1);
+      navigate(`/search/${query}`);
+      
+    }
   }
 
   return (

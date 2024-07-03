@@ -9,7 +9,7 @@ import { Outlet, useLocation} from 'react-router-dom';
 
 const HomeLayout = () => {
     const {pathname} = useLocation()
-    const [pageNo, setpageNo] = useState(1);
+    const [pageNo, setpageNo] = useState(JSON.parse(localStorage.getItem('pageNo')) || 1);
     const [Images, setImages] = useState([]);
     const getImages = async () => {
         const { data } = await Axios.get(`/curated?page=${pageNo}`);
@@ -18,6 +18,7 @@ const HomeLayout = () => {
     
     useEffect(() => {
         getImages();
+        localStorage.setItem('pageNo', pageNo);
     }, [pageNo])
 
     return (
