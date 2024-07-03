@@ -5,10 +5,10 @@ import GridSection from '../partials/GridSection';
 import Nav from './Nav';
 import Banner from './Banner';
 import Pagination from '../partials/Pagination';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation} from 'react-router-dom';
 
 const HomeLayout = () => {
-
+    const {pathname} = useLocation()
     const [pageNo, setpageNo] = useState(1);
     const [Images, setImages] = useState([]);
     const getImages = async () => {
@@ -25,9 +25,10 @@ const HomeLayout = () => {
             <Banner />
             <div className='min-h-screen w-full pt-20 py-32 px-10'>
                 <GridHeading />
-                <GridSection Images={Images}  />
+                <GridSection Images={Images} path={pathname}  />
                 <Pagination pageNo={pageNo} setpageNo={setpageNo} />
             </div>
+            <Outlet />
         </div>
     )
 }
