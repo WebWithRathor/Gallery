@@ -7,7 +7,9 @@ const MainRoutes = () => {
   return (
     <>
         <Routes>
-            <Route path='/' element={<HomeLayout/>}/>
+            <Route path='/' element={<HomeLayout/>}>
+              <Route path='/view/:id' element={<HomeLayout/>}/>
+            </Route>
             <Route path='/search/:query' element={<SearchLayout/>}/>
         </Routes>
     </>

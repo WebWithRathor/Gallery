@@ -5,6 +5,7 @@ import GridSection from '../partials/GridSection';
 import Nav from './Nav';
 import Banner from './Banner';
 import Pagination from '../partials/Pagination';
+import { Outlet } from 'react-router-dom';
 
 const HomeLayout = () => {
 
