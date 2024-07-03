@@ -15,6 +15,7 @@ const HomeLayout = () => {
         const { data } = await Axios.get(`/curated?page=${pageNo}`);
         setImages(data);
     }
+    
     useEffect(() => {
         getImages();
     }, [pageNo])
