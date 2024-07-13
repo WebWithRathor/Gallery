@@ -39,7 +39,7 @@ const ShowImg = () => {
             <Link className='absolute top-5 right-5' to={pathname}><i className="ri-close-line text-white text-4xl"></i></Link>
             <img src={image.src.large2x} className='h-full w-full object-contain' alt="" />
             <div className='border px-4 py-2 group rounded absolute top-[90%] left-1/2 -translate-x-1/2 bg-white'>Download <i className="ri-arrow-down-s-line"></i>
-                <div className="options z-10 absolute scale-x-0 group-hover:scale-x-100 origin-left transition-all bg-white left-full rounded top-0 flex border shadow-inner w-max">
+                <div className="options z-10 absolute md:scale-x-0 md:group-hover:scale-x-100 scale-y-0 group-hover:scale-y-100 origin-bottom md:origin-left transition-all bg-white left-full rounded top-[-300%] md:top-0 flex md:flex-row flex-col border shadow-inner w-max">
                     <h1 onClick={(e) => downloadImage(image.src.large2x, `Photu_${image.id}`)} className='py-2 px-4 cursor-pointer hover:bg-gray-100'>1080p</h1>
                     <h1 onClick={(e) => downloadImage(image.src.large, `Photu_${image.id}`)} className='py-2 px-4 cursor-pointer hover:bg-gray-100'>720p</h1>
                     <h1 onClick={(e) => downloadImage(image.src.medium, `Photu_${image.id}`)} className='py-2 px-4 cursor-pointer hover:bg-gray-100'>480p</h1>
