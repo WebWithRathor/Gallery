@@ -46,7 +46,7 @@ const ShowImg = () => {
                     <h1 onClick={(e) => downloadImage(image.src.small, `Photu_${image.id}`)} className='py-2 px-4 cursor-pointer hover:bg-gray-100'>360p</h1>
                 </div>
             </div>
-        </div> : <h1>ahdhashgfh guisahduiash ayugydyagw sd agdas bd g shfc</h1>
+        </div> : <h1>Loading</h1>
     )
 }
 
