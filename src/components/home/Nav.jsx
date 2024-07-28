@@ -24,9 +24,8 @@ const Nav = () => {
       <div ref={textRef} className='w-full z-[999] text-white py-7 fixed flex  justify-between px-10'>
         <h1 className='font-medium tracking-[5px] text-[2vw] md:text-[.8vw] uppercase'>PixieVerse</h1>
         <div ref={textRef1} className="left flex gap-4 md:gap-10">
-          <NavLink to='/' className={({isActive})=> isActive ? 'border-b' : ''}><h1 className='font-medium text-[8px] md:text-[.8vw] tracking-[2px]  uppercase'>home</h1></NavLink>
-          <NavLink to='/search/video' className={({isActive})=> isActive ? 'border-b' : ''}> <h1 className='font-medium text-[8px] md:text-[.8vw] tracking-[2px]  uppercase'>video</h1></NavLink>
-          <NavLink to='/search/images' className={({isActive})=> isActive ? 'border-b' : ''}><h1 className='font-medium text-[8px] md:text-[.8vw] tracking-[2px]  uppercase'>images</h1></NavLink>
+          <NavLink to='/' className={({isActive})=> isActive ? 'border-b' : ''}><h1 className='font-medium text-[8px] md:text-[.8vw] tracking-[2px]  uppercase'>Images</h1></NavLink>
+          <NavLink to='/videos' className={({isActive})=> isActive ? 'border-b' : ''}> <h1 className='font-medium text-[8px] md:text-[.8vw] tracking-[2px]  uppercase'>video</h1></NavLink>
         </div>
       </div>
     </>
