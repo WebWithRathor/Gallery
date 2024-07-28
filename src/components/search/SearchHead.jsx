@@ -6,7 +6,7 @@ const SearchHead = ({query,setpageNo}) => {
     const [search, setsearch] = useState('');
     const searchHandle = () => {
         if (search != '') {
-            navigate(`/search/${search}`)
+            navigate(`/image/search/${search}`)
             setpageNo(1)
             setsearch('')
         }
